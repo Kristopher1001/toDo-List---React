@@ -1,0 +1,5 @@
+[33mcommit 98e5034d2f6eb84c33ed3dc70c9fea051b87bdcf[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m)[m
+Author: Krzysztof Konieczko <kristopher1001@gmail.com>
+Date:   Mon Jun 5 22:47:18 2023 +0200
+
+    Initialize project using Create React App
