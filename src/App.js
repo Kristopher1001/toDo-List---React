@@ -17,23 +17,11 @@ function App() {
     <body>
       <Container>
         <Header title="Lista zadań"></Header>
-        <section title="Dodaj nowe zadanie" body={<Form />} />
-        <section title="Lista zadań" 
+        <Section title="Dodaj nowe zadanie" body={<Form />} />
+        <Section title="Lista zadań" 
         body={<Tasks tasks={tasks} hideDoneTasks={hideDoneTasks} />}
         extraHeaderContent= {<Buttons tasks={tasks} hideDoneTasks={hideDoneTasks} />}
         />
-        <section className="section">
-          <div className="section__layout">
-            <h2 className="section__header">Lista zadań</h2>
-            <div className="section__button">
-              <button className="section__buttonToggle section__buttonToggle--hide">Ukryj ukończone</button>
-              <button className="section__buttonToggle">Ukończ wszystkie</button>
-            </div>
-          </div>
-          <div className="section__body">
-            
-          </div>
-        </section>
       </Container>
     </body>
   );
