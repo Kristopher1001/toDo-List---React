@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/Kristopher1001/toDo-List-React.git/static/css/main.af55c05a.css",
+    "main.js": "/Kristopher1001/toDo-List-React.git/static/js/main.931c0756.js",
+    "static/js/787.d93b6323.chunk.js": "/Kristopher1001/toDo-List-React.git/static/js/787.d93b6323.chunk.js",
+    "index.html": "/Kristopher1001/toDo-List-React.git/index.html",
+    "main.af55c05a.css.map": "/Kristopher1001/toDo-List-React.git/static/css/main.af55c05a.css.map",
+    "main.931c0756.js.map": "/Kristopher1001/toDo-List-React.git/static/js/main.931c0756.js.map",
+    "787.d93b6323.chunk.js.map": "/Kristopher1001/toDo-List-React.git/static/js/787.d93b6323.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.af55c05a.css",
+    "static/js/main.931c0756.js"
+  ]
+}
