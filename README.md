@@ -1,3 +1,30 @@
+# To-do List in React
+## Demo
+![List](/images/List.jpg)
+
+You can visit demo my application here: [To-do list in React](https://kristopher1001.github.io/toDo-List-React/)
+## Description
+
+This is application which is useful in every day in our life. It can help to plan tasks and remember about them. 
+You can add tasks to the list, mark as done and delete them if you want. The To-do List application is created in polish language only. 
+## Technologies
+
+-React <br>
+-HTML <br>
+-Babel <br>
+-Normalize <br>
+-CSS <br>
+-Java Script <br>
+-Webpack <br>
+-BEM convention
+
+
+
+
+
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
