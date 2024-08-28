@@ -1,7 +1,7 @@
 import React from "react";
 import "./style.css";
 
-const Buttons = (props, hideDoneTasks, toggleHideDoneTasks) => (
+const Buttons = (props, hideDoneTasks, toggleHideDoneTasks, setAllDone) => (
     <div className="section__button">
         {props.tasks.length > 0 && (
             <React.Fragment>
@@ -10,6 +10,7 @@ const Buttons = (props, hideDoneTasks, toggleHideDoneTasks) => (
                     {hideDoneTasks ? "Pokaż" : "Ukryj"} ukończone
                 </button>
                 <button
+                    onClick={setAllDone}
                     className="section__buttonToggle"
                     disabled={props.tasks.every(({ done }) => done)}
                 >
