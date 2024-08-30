@@ -8,7 +8,7 @@ import Container from "./Container";
 
 
 function App() {
-  const [hideDoneTasks, setHideDone] = useState(false);
+  const [hideDone, setHideDone] = useState(false);
 
   const [tasks, setTasks] = useState(
     [
@@ -18,8 +18,8 @@ function App() {
 
   );
 
-  const toggleHideDoneTasks = () => {
-    setHideDone(hideDoneTasks => !hideDoneTasks);
+  const togglehideDone = () => {
+    setHideDone(hideDone => !hideDone);
   };
 
   const removeTask = (id) => {
@@ -59,10 +59,10 @@ function App() {
         <Header title="Lista zadań"></Header>
         <Section title="Dodaj nowe zadanie" body={<Form addNewTask={addNewTask}/>} />
         <Section title="Lista zadań" 
-        body={<Tasks tasks={tasks} hideDoneTasks={hideDoneTasks} removeTask={removeTask} toggleTaskDone={toggleTaskDone}/>}
+        body={<Tasks tasks={tasks} hideDone={hideDone} removeTask={removeTask} toggleTaskDone={toggleTaskDone}/>}
         extraHeaderContent= {<Buttons tasks={tasks} 
-        hideDoneTasks={hideDoneTasks} 
-        toggleHideDoneTasks={toggleHideDoneTasks} 
+        hideDone={hideDone} 
+        togglehideDone={togglehideDone} 
         setAllDone={setAllDone}/>}
         />
       </Container>

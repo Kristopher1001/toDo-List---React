@@ -4,7 +4,7 @@ const Tasks = (props, removeTask, toggleTaskDone) => (
     <ul className="tasks">
     {props.tasks.map((task) => (
         <li 
-        className={`tasks__item task.done && props.hideDoneTasks ? " tasks__item--hidden" : ""}`} key={task.id}>
+        className={`tasks__item task.done && props.hideDone ? " tasks__item--hidden" : ""}`} key={task.id}>
             <button onClick={() => toggleTaskDone(task.id)} className="tasks__button tasks__button--toggleDone">
             {task.done ? "✓" : ""}
             </button>

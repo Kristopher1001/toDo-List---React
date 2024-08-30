@@ -1,13 +1,13 @@
 import React from "react";
 import "./style.css";
 
-const Buttons = (props, hideDoneTasks, toggleHideDoneTasks, setAllDone) => (
+const Buttons = (props, hideDone, togglehideDone, setAllDone) => (
     <div className="section__button">
         {props.tasks.length > 0 && (
             <React.Fragment>
-                <button onClick={toggleHideDoneTasks} className="section__buttonToggle section__buttonToggle--hide"
+                <button onClick={togglehideDone} className="section__buttonToggle section__buttonToggle--hide"
                 >
-                    {hideDoneTasks ? "Pokaż" : "Ukryj"} ukończone
+                    {hideDone ? "Pokaż" : "Ukryj"} ukończone
                 </button>
                 <button
                     onClick={setAllDone}
