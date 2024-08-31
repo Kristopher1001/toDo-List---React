@@ -1,9 +1,9 @@
 import React from "react";
 import "./style.css";
 
-const Buttons = (props, hideDone, toggleHideDone, setAllDone) => (
+const Buttons = ({tasks, hideDone, toggleHideDone, setAllDone}) => (
     <div className="section__button">
-        {props.tasks.length > 0 && (
+        {tasks.length > 0 && (
             <React.Fragment>
                 <button onClick={toggleHideDone} className="section__buttonToggle section__buttonToggle--hide"
                 >
@@ -12,7 +12,7 @@ const Buttons = (props, hideDone, toggleHideDone, setAllDone) => (
                 <button
                     onClick={setAllDone}
                     className="section__buttonToggle"
-                    disabled={props.tasks.every(({ done }) => done)}
+                    disabled={tasks.every(({ done }) => done)}
                 >
                     Ukończ wszystkie
                 </button>
