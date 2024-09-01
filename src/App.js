@@ -14,9 +14,7 @@ function App() {
     [
       { id: 1, content: "Nauczyć się Reacta", done: false },
       { id: 2, content: "Stworzyć aplikację", done: true },
-    ],
-
-  );
+    ]);
 
   const toggleHideDone = () => {
     setHideDone((hideDone) => !hideDone);
@@ -64,6 +62,7 @@ function App() {
           hideDone={hideDone} 
           removeTask={removeTask} 
           toggleTaskDone={toggleTaskDone}/>}
+
         extraHeaderContent= {
         <Buttons 
           tasks={tasks} 

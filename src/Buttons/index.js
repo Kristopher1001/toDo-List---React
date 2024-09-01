@@ -5,9 +5,10 @@ const Buttons = ({tasks, hideDone, toggleHideDone, setAllDone}) => (
     <div className="section__button">
         {tasks.length > 0 && (
             <React.Fragment>
-                <button onClick={toggleHideDone} className="section__buttonToggle section__buttonToggle--hide"
+                <button onClick={toggleHideDone} 
+                className="section__buttonToggle section__buttonToggle--hide"
                 >
-                    {!hideDone ? "Pokaż" : "Ukryj"} ukończone
+                    {hideDone ? "Pokaż" : "Ukryj"} ukończone
                 </button>
                 <button
                     onClick={setAllDone}

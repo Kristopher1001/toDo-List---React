@@ -15,6 +15,8 @@ return(
         <input value={newTaskContent} 
         placeholder="Wpisz zadanie" 
         onChange={({target}) => setNewTaskContent(target.value)}
+        required
+        autoFocus
         className="form__input" />
         <button className="form__button">Dodaj zadanie</button>
     </form>
