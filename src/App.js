@@ -27,48 +27,48 @@ function App() {
 
   const toggleTaskDone = (id) => {
     setTasks((tasks) => tasks.map(task => {
-      if(task.id === id) {
-        return {...task, done: !task.done};
-        }
+      if (task.id === id) {
+        return { ...task, done: !task.done };
+      }
 
-        return task;
-      }))
-    };
+      return task;
+    }))
+  };
 
-    const setAllDone = () => {
-      setTasks(tasks => tasks.map(task => 
-        ({...task, done: true})));
-    };
-  
-    const addNewTask = (content) => {
-      setTasks(tasks => [
-        ...tasks, 
-        {
+  const setAllDone = () => {
+    setTasks(tasks => tasks.map(task =>
+      ({ ...task, done: true })));
+  };
+
+  const addNewTask = (content) => {
+    setTasks(tasks => [
+      ...tasks,
+      {
         content,
         done: false,
         id: tasks.length ? tasks[tasks.length - 1].id + 1 : 1,
-        },
-      ])
-    };
+      },
+    ])
+  };
 
   return (
     <body>
       <Container>
         <Header title="Lista zadań"></Header>
-        <Section title="Dodaj nowe zadanie" body={<Form addNewTask={addNewTask}/>} />
-        <Section title="Lista zadań" 
-        body={<Tasks 
-          tasks={tasks} 
-          hideDone={hideDone} 
-          removeTask={removeTask} 
-          toggleTaskDone={toggleTaskDone}/>}
+        <Section title="Dodaj nowe zadanie" body={<Form addNewTask={addNewTask} />} />
+        <Section title="Lista zadań"
+          body={<Tasks
+            tasks={tasks}
+            hideDone={hideDone}
+            removeTask={removeTask}
+            toggleTaskDone={toggleTaskDone} />}
 
-        extraHeaderContent= {
-        <Buttons 
-          tasks={tasks} 
-          hideDone={hideDone} 
-          toggleHideDone={toggleHideDone} 
-          setAllDone={setAllDone}/>}
+          extraHeaderContent={
+            <Buttons
+              tasks={tasks}
+              hideDone={hideDone}
+              toggleHideDone={toggleHideDone}
+              setAllDone={setAllDone} />}
         />
       </Container>
     </body>
