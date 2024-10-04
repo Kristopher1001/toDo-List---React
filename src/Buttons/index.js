@@ -1,26 +1,22 @@
 import React from "react";
-import "./style.css";
+import { Position, Buttonhide, Buttontoggle } from "./styled.js";
 
 const Buttons = ({ tasks, hideDone, toggleHideDone, setAllDone }) => (
-    <div className="section__button">
-        {tasks.length > 0 && (
-            <React.Fragment>
-                <button onClick={toggleHideDone}
-                    className="section__buttonToggle section__buttonToggle--hide"
-                >
-                    {hideDone ? "Pokaż" : "Ukryj"} ukończone
-                </button>
-                <button
-                    onClick={setAllDone}
-                    className="section__buttonToggle"
-                    disabled={tasks.every(({ done }) => done)}
-                >
-                    Ukończ wszystkie
-                </button>
-            </React.Fragment>
-        )}
-    </div>
+  <Position>
+    {tasks.length > 0 && (
+      <React.Fragment>
+        <Buttonhide onClick={toggleHideDone}>
+          {hideDone ? "Pokaż" : "Ukryj"} ukończone
+        </Buttonhide>
+        <Buttontoggle
+          onClick={setAllDone}
+          disabled={tasks.every(({ done }) => done)}
+        >
+          Ukończ wszystkie
+        </Buttontoggle>
+      </React.Fragment>
+    )}
+  </Position>
 );
 
 export default Buttons;
-
