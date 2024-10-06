@@ -1,8 +1,9 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import { Wrapper, Input, Newtaskbutton } from "./styled.js";
 
 const Form = ({ addNewTask }) => {
     const [newTaskContent, setNewTaskContent] = useState("");
+    const inputRef = useRef(null)
 
     const onFormSubmit = (event) => {
         event.preventDefault();
@@ -12,18 +13,19 @@ const Form = ({ addNewTask }) => {
 
         addNewTask(newTaskContent.trim());
         setNewTaskContent("");
+        inputRef.current.focus();
     }
 
     return (
         <Wrapper
         onSubmit={onFormSubmit}>
-            <Input value={newTaskContent}
+            <Input 
+                ref={inputRef}
+                value={newTaskContent}
                 placeholder="Wpisz zadanie"
                 onChange={({ target }) => setNewTaskContent(target.value)}
-                required
-                autoFocus
-                className="form__input" />
-            <Newtaskbutton className="form__button">Dodaj zadanie</Newtaskbutton>
+                required />
+            <Newtaskbutton>Dodaj zadanie</Newtaskbutton>
         </Wrapper>
     );
 }
