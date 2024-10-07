@@ -11,12 +11,12 @@ You can add tasks to the list, mark as done and delete them if you want. The To-
 
 -React <br>
 -HTML <br>
+-CSS <br>
 -Babel <br>
 -Normalize <br>
--CSS <br>
--Java Script <br>
 -Webpack <br>
--BEM convention
+-Custom Hooks<br>
+-Styled Components<br>
 
 
 
