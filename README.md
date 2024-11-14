@@ -17,6 +17,7 @@ You can add tasks to the list, mark as done and delete them if you want. The To-
 -Webpack <br>
 -Custom Hooks<br>
 -Styled Components<br>
+-Redux<br>
 
 
 
